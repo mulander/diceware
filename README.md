@@ -1,2 +1,2 @@
 # diceware
-Elm diceware passphrase generator
+Diceware password lookup for Elm
