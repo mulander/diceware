@@ -31,7 +31,7 @@ sensitive data the source of inputs is important.
 
 Elm (as of version 0.17) doesn't ship with a cryptographically
 secure random number generator hence this library is not
-generating the sequences and expects library consume to
+generating the sequences and expects library consumers to
 provide a secure source.
 
 The recommended approach is creating a javascript port
@@ -69,8 +69,8 @@ passphrase : String -> List (Int, Int, Int, Int, Int) -> String
 passphrase sep inputs =
         String.join sep (List.map lookupWord inputs) 
 
-{-| Lookup a word in the default Diceware dictiony.
-The input must be a tuple of 5 integer with values
+{-| Lookup a word in the default Diceware dictionary.
+The input must be a tuple of 5 integers with values
 between 1 and 6 inclusive. Values outside of the
 range will cause a lookup failure and will result
 in Debug.crash being called.
